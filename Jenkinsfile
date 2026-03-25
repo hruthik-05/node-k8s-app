@@ -45,7 +45,7 @@ pipeline {
             steps {
                 sh '''
                 # Load latest image into Minikube
-                # minikube image load my-node-app:latest
+                 minikube image load my-node-app:${BUILD_NUMBER}
 
                 # Apply manifests
                 minikube kubectl -- apply -f k8s/deployment.yaml
