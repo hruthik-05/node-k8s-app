@@ -15,6 +15,6 @@ spec:
       containers:
       - name: my-node-app
         image: my-node-app:latest  # your Docker Hub image
-        imagePullPolicy: Never
+        imagePullPolicy: Always
         ports:
         - containerPort: 8089
