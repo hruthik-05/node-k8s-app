@@ -19,7 +19,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 sh '''
-                docker build -t my-node-app:latest .
+                docker build -t my-node-app:${BUILD_NUMBER} .
                 '''
             }
         }
