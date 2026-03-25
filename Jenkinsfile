@@ -45,6 +45,7 @@ pipeline {
             steps {
                 sh '''
                 # Load latest image into Minikube
+                 docker tag my-node-app:${BUILD_NUMBER} my-node-app:latest
                  minikube image load my-node-app:${BUILD_NUMBER}
 
                 # Apply manifests
